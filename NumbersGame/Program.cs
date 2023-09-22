@@ -6,6 +6,8 @@ namespace NumbersGame
     {
         static void Main(string[] args)
         {
+            Console.Write("Välkommen! Jag tänker på ett nummer mellan 1-20. " +
+            "Kan du gissa vilket? Du får fem försök.");
             CheckGuess();
         }
         public static void CheckGuess()
@@ -16,9 +18,7 @@ namespace NumbersGame
             int guesses = 5;
             while (guesses != 0)
             {
-                Console.Clear();
-                Console.Write("Välkommen! Jag tänker på ett nummer mellan 1-20. " +
-                "Kan du gissa vilket? Du får fem försök.\nGissa: ");
+                Console.Write("\nGISSA: ");
                 if (int.TryParse(Console.ReadLine(), out userGuess))
                 {
                     if (userGuess == number)
@@ -49,8 +49,9 @@ namespace NumbersGame
                 }
                 else
                 {
+                    Console.Clear();
                     Console.WriteLine("Du måste skriva in siffror!");
-                    Console.ReadLine();
+                    Console.ReadKey();
                     continue;
                 }
             }
