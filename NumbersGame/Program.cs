@@ -24,7 +24,7 @@ namespace NumbersGame
                     if (userGuess == number)
                     {
                         Console.Clear();
-                        Console.WriteLine($"Woho! Du gjorde det!");
+                        Console.WriteLine("Woho! Du gjorde det!");
                         Console.ReadLine();
                         break;
                     }
