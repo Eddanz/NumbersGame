@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace NumbersGame
-{
+{// ===== Eddie Halling SUT23 =====
     internal class Program
     {
         static void Main(string[] args)
@@ -24,7 +24,7 @@ namespace NumbersGame
                     if (userGuess == number)
                     {
                         Console.Clear();
-                        Console.WriteLine("Woho! Du gjorde det!");
+                        Console.WriteLine($"Woho! Du gjorde det!");
                         Console.ReadLine();
                         break;
                     }
@@ -34,7 +34,6 @@ namespace NumbersGame
                         Console.Clear();
                         Console.Write($"Tyvärr du gissade {userGuess}, vilket är för högt!" +
                         $"\nDu har {guesses} gissningar kvar..");
-                        Console.ReadKey();
                         continue;
                     }
                     else if (userGuess < number)
@@ -43,7 +42,6 @@ namespace NumbersGame
                         Console.Clear();
                         Console.Write($"Tyvärr du gissade {userGuess}, vilket är för lågt!" +
                         $"\nDu har {guesses} gissningar kvar..");
-                        Console.ReadKey();
                         continue;
                     }
                 }
@@ -51,7 +49,6 @@ namespace NumbersGame
                 {
                     Console.Clear();
                     Console.WriteLine("Du måste skriva in siffror!");
-                    Console.ReadKey();
                     continue;
                 }
             }
